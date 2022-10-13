@@ -1,0 +1,85 @@
+extends layout 
+block content 
+    .row.page-header 
+        .col-lg-12 
+            h1 Restorantlar 
+    .row 
+        .col-xs-12.col-md-12 
+            .row
+                .col-xs-12.col-sm-6
+                    p.rating 
+                        span.glyphicon.glyphicon-star
+                        span.glyphicon.glyphicon-star
+                        span.glyphicon.glyphicon-star
+                        span.glyphicon.glyphicon-star
+                        span.glyphicon.glyphicon-star-empty
+                    p Isparta Restorantlar
+                    .panel.panel-primary 
+                        .panel-heading 
+                            h2.panel-title Açılış Saatleri 
+                        .panel-body 
+                            p 
+                                | Pazartesi-Cuma: 9:00-22:00
+                            p 
+                                | Cumartesi-Pazar: 9:00-21:00
+                        .panel.panel-primary 
+                            .panel-heading 
+                                h2.panel-title Neler Var?
+                            .panel-body 
+                                span.label.label-warning Kıymalı Yumurtalı Pide
+                                | &nbsp;
+                                span.label.label-warning Kıymalı Pide
+                                | &nbsp;
+                                span.label.label-warning Lahmacun
+                                | &nbsp;
+                .col-xs-12.col-sm-6             
+                    .panel.panel-primary 
+                        .panel-heading 
+                            h2.panel-title Konum Bilgisi 
+                        .panel-body 
+                            -var enlem=37.78
+                            -var boylam=30.56
+                            img.img-responsive.img-rounded(src='http://maps.googleapis.com/maps/api/staticmap?center='+enlem+','+boylam+
+                            '&zoom=12&size=600x400&markers='+enlem+','+boylam+'&key=AIzaSyCmmKygTpBzHGOZEciJpAdxC9v_tWHagnE')
+    .row 
+        .col-xs-12 
+            .panel.panel-primary
+                .panel-heading
+                    a.btn.btn-default.pull-right(href='/mekan/yorum/yeni') Yorum Ekle
+                    h2.panel-title Müşteri Yorumları
+                .panel-body.review-container
+                    .row 
+                        .review 
+                            .well.well-sm.review-header
+                                span.rating 
+                                span.review-author Kazım Kağan İğci
+                                small.reviewTimestamp &nbsp; 13 Ekim 2022
+                                span.rating 
+                                span.glyphicon.glyphicon-star
+                                span.glyphicon.glyphicon-star
+                                span.glyphicon.glyphicon-star
+                                span.glyphicon.glyphicon-star
+                                span.glyphicon.glyphicon-star-empty
+                            .col-xs-12 
+                                p Çok güzel ya.
+    .row 
+        .col-xs-12 
+            .panel.panel-primary
+                .panel-heading
+                    a.btn.btn-default.pull-right(href='/mekan/yorum/yeni') Yorum Ekle
+                    h2.panel-title Müşteri Yorumları
+                .panel-body.review-container
+                    .row 
+                        .review 
+                            .well.well-sm.review-header
+                                span.review-author Kai
+                                small.reviewTimestamp &nbsp; 13 Ekim 2022
+                                span.rating 
+                                span.glyphicon.glyphicon-star
+                                span.glyphicon.glyphicon-star
+                                span.glyphicon.glyphicon-star
+                                span.glyphicon.glyphicon-star
+                                span.glyphicon.glyphicon-star-empty
+                            .col-xs-12 
+                                p Çok para ya.
+                            

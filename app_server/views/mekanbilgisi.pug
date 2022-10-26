@@ -12,25 +12,25 @@ block content
             span.glyphicon.glyphicon-star
             span.glyphicon.glyphicon-star
             span.glyphicon.glyphicon-star
-            span.glyphicon.glyphicon-star
-          p Isparta Merkez
+            span.glyphicon.glyphicon-star-empty 
+          p Uğur Pide
           .panel.panel-primary
             .panel-heading
               h2.panel-title Açılış Saatleri
             .panel-body
               p 
-                | Pazartesi-Cuma: 10:00-22:00
+                | Pazartesi-Cuma: 08:00-24:00
               p 
-                | Cumartesi-Pazar: 1:00-21:00
+                | Cumartesi-Pazar: 12:00-22:00
           .panel.panel-primary
             .panel-heading
               h2.panel-title Neler Var?
             .panel-body
-              span.label.label-warning Kıymalı Pide
-              | &nbsp;
-              span.label.label-warning Kuşbaşı Pide
+              span.label.label-warning Pide
               | &nbsp;
               span.label.label-warning Lahmacun
+              | &nbsp;
+              span.label.label-warning Tatlı
               | &nbsp;
         .col-xs-12.col-sm-6
           .panel.panel-primary 
@@ -40,45 +40,23 @@ block content
               -var enlem=37.78
               -var boylam=30.56
               img.img-responsive.img-rounded(src='http://maps.googleapis.com/maps/api/staticmap?center='+enlem+','+boylam+'&zoom=12&size=600x400&markers='+enlem+','+boylam+'&key=AIzaSyCmmKygTpBzHGOZEciJpAdxC9v_tWHagnE')
-    .row 
-        .col-xs-12 
-            .panel.panel-primary
-                .panel-heading
-                    a.btn.btn-default.pull-right(href='/mekan/yorum/yeni') Yorum Ekle
-                    h2.panel-title Müşteri Yorumları
-                .panel-body.review-container
-                    .row 
-                        .review 
-                            .well.well-sm.review-header
-                                span.rating 
-                                span.review-author Kazım Kağan İğci
-                                small.reviewTimestamp &nbsp; 13 Ekim 2022
-                                span.rating 
-                                span.glyphicon.glyphicon-star
-                                span.glyphicon.glyphicon-star
-                                span.glyphicon.glyphicon-star
-                                span.glyphicon.glyphicon-star
-                                span.glyphicon.glyphicon-star-empty
-                            .col-xs-12 
-                                p Çok güzel ya.
-    .row 
-        .col-xs-12 
-            .panel.panel-primary
-                .panel-heading
-                    a.btn.btn-default.pull-right(href='/mekan/yorum/yeni') Yorum Ekle
-                    h2.panel-title Müşteri Yorumları
-                .panel-body.review-container
-                    .row 
-                        .review 
-                            .well.well-sm.review-header
-                                span.review-author Kai
-                                small.reviewTimestamp &nbsp; 13 Ekim 2022
-                                span.rating 
-                                span.glyphicon.glyphicon-star
-                                span.glyphicon.glyphicon-star
-                                span.glyphicon.glyphicon-star
-                                span.glyphicon.glyphicon-star
-                                span.glyphicon.glyphicon-star-empty
-                            .col-xs-12 
-                                p Çok para ya.
-                            
+    .row
+      .col-xs-12 
+        .panel.panel-primary
+          .panel-heading
+            a.btn.btn-default.pull-right(href='/mekan/yorum/yeni') Yorum Ekle
+            h2.panel-title Müşteri Yorumları
+          .panel-body.review-container
+            .row 
+              .review 
+                .well.well-sm.review-header
+                  span.rating 
+                  span.glyphicon.glyphicon-star 
+                  span.glyphicon.glyphicon-star
+                  span.glyphicon.glyphicon-star 
+                  span.glyphicon.glyphicon-star
+                  span.glyphicon.glyphicon-star-empty
+                  span.review-author Kazım Kağan İğci
+                  small.reviewTimesTamp &nbsp; 13 Ekim 2022
+                .col-xs-12
+                  p Güzel mekan

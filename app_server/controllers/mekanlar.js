@@ -1,9 +1,9 @@
 var express = require("express");
 var router = express.Router();
 
-const anaSayfa = function (req, res) {
+const anaSayfa = function (req, res, next) {
   res.render("anasayfa", {
-    baslik: "Ana Sayfa",
+    baslik: "Anasayfa",
     sayfaBaslik: {
       siteAd: "MekanBul",
       slogan: "Civardaki Mekanları Keşfet!",
@@ -11,16 +11,16 @@ const anaSayfa = function (req, res) {
     mekanlar: [
       {
         ad: "Starbucks",
-        adres: "Centrum Garden",
-        puan: "4",
-        imkanlar: ["Dünya Kahveleri", "Yiyecek", "Hızlı Wifi Bağlantısı"],
-        mesafe: "100m",
+        adres: "Modernevler Mahallesi",
+        puan: "3",
+        imkanlar: ["Kahve", "Çay", "Kek"],
+        mesafe: "6km",
       },
       {
-        ad: "Gloria Jeans",
-        adres: "Sdü Doğu Kampüsü",
-        puan: "3",
-        imkanlar: ["Kahve", "Çay", "Pasta"],
+        ad: "Gloria",
+        puan: "4",
+        adres: "İyaş AVM",
+        imkanlar: ["Kahve", "Çay", "Kek"],
         mesafe: "5km",
       },
     ],
@@ -33,9 +33,9 @@ const mekanBilgisi = function (req, res) {
     mekanBaslik: "Starbucks",
     mekanDetay: {
       ad: "Starbucks",
-      adres: "Centrum Garden AVM",
+      adres: "Modernevler",
       puan: "4",
-      imkanlar: ["Dünya Kahveleri", "Kekler", "Pastalar"],
+      imkanlar: ["Kahve", "Çay", "Kek"],
       koordinatlar: {
         enlem: "37.7",
         boylam: "30.5",
@@ -43,21 +43,23 @@ const mekanBilgisi = function (req, res) {
       saatler: [
         {
           gunler: "Pazartesi-Cuma",
-          acilis: "9:00-23:00",
-          kapali: "false",
+          acilis: "9:00",
+          kapanis: "23:00",
+          kapali: false,
         },
         {
           gunler: "Cumartesi-Pazar",
-          acilis: "10:00-22:00",
-          kapali: "false",
+          acilis: "10:00",
+          kapanis: "22:00",
+          kapali: false,
         },
       ],
       yorumlar: [
         {
-          yorumYapan: "Kazım Kağan İğci",
-          puan: "5",
-          tarih: "23 Ekim 2022",
-          yorumMetni: "Kahveler güzel.",
+          yorumYapan: "KAZIM KAGAN IGCI",
+          puan: "4",
+          tarih: "1 Kasım 2022",
+          yorumMetni: "Güzell.",
         },
       ],
     },
@@ -65,7 +67,7 @@ const mekanBilgisi = function (req, res) {
 };
 
 const yorumEkle = function (req, res, next) {
-  res.render("yorumekle", { title: "Yorum Ekle" });
+  res.render("yorumekle", { title: "Yorum Sayfası" });
 };
 
 module.exports = {
